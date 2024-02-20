@@ -1,0 +1,92 @@
+[debug] [2024-02-20T18:51:07.867Z] ----------------------------------------------------------------------
+[debug] [2024-02-20T18:51:07.868Z] Command:       /usr/local/bin/node /usr/local/bin/firebase serve --only functions
+[debug] [2024-02-20T18:51:07.868Z] CLI Version:   13.0.3
+[debug] [2024-02-20T18:51:07.868Z] Platform:      darwin
+[debug] [2024-02-20T18:51:07.868Z] Node Version:  v20.11.0
+[debug] [2024-02-20T18:51:07.868Z] Time:          Tue Feb 20 2024 19:51:07 GMT+0100 (Central European Standard Time)
+[debug] [2024-02-20T18:51:07.868Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-02-20T18:51:07.911Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-02-20T18:51:07.912Z] > authorizing via signed-in user (olivio.mutaquiha@gmail.com)
+[debug] [2024-02-20T18:51:07.912Z] [iam] checking project meu-xitique for permissions ["firebase.projects.get"]
+[debug] [2024-02-20T18:51:07.912Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/meu-xitique:testIamPermissions [none]
+[debug] [2024-02-20T18:51:07.912Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/meu-xitique:testIamPermissions x-goog-quota-user=projects/meu-xitique
+[debug] [2024-02-20T18:51:07.912Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/meu-xitique:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-20T18:51:08.126Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/meu-xitique:testIamPermissions 200
+[debug] [2024-02-20T18:51:08.127Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/meu-xitique:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2024-02-20T18:51:08.128Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/meu-xitique [none]
+[debug] [2024-02-20T18:51:08.379Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/meu-xitique 200
+[debug] [2024-02-20T18:51:08.380Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/meu-xitique {"projectId":"meu-xitique","projectNumber":"73915929332","displayName":"meu-xitique","name":"projects/meu-xitique","resources":{"hostingSite":"meu-xitique"},"state":"ACTIVE","etag":"1_08640002-ae72-401b-9fff-0317f5498dc8"}
+[debug] [2024-02-20T18:51:08.385Z] defaultcredentials: writing to file /Users/mutaquihadev/.config/firebase/olivio_mutaquiha_gmail.com_application_default_credentials.json
+[debug] [2024-02-20T18:51:08.387Z] Setting GAC to /Users/mutaquihadev/.config/firebase/olivio_mutaquiha_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/mutaquihadev/.config/firebase/olivio_mutaquiha_gmail.com_application_default_credentials.json"}}
+[debug] [2024-02-20T18:51:08.388Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/meu-xitique/adminSdkConfig [none]
+[debug] [2024-02-20T18:51:08.556Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/meu-xitique/adminSdkConfig 200
+[debug] [2024-02-20T18:51:08.556Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/meu-xitique/adminSdkConfig {"projectId":"meu-xitique","storageBucket":"meu-xitique.appspot.com"}
+[info] i  functions: Watching "/Users/mutaquihadev/WebstormProjects/xitique/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/mutaquihadev/WebstormProjects/xitique/functions\" for Cloud Functions..."}}
+[debug] [2024-02-20T18:51:08.584Z] Validating nodejs source
+[debug] [2024-02-20T18:51:08.924Z] > [functions] package.json contents: {
+  "name": "functions",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "18"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "firebase-admin": "^11.8.0",
+    "firebase-functions": "^4.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.0",
+    "firebase-functions-test": "^3.1.0"
+  },
+  "private": true
+}
+[debug] [2024-02-20T18:51:08.924Z] Building nodejs source
+[debug] [2024-02-20T18:51:08.924Z] Failed to find version of module node: reached end of search path /Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "18" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2024-02-20T18:51:08.926Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-02-20T18:51:08.929Z] Found firebase-functions binary at '/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/.bin/firebase-functions'
+[info] Serving at port 9000
+
+[debug] [2024-02-20T18:51:09.164Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"helloWorld"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] ✔  functions: Loaded functions definitions from source: helloWorld. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: helloWorld."}}
+[info] ✔  functions[us-central1-helloWorld]: http function initialized (http://localhost:5000/meu-xitique/us-central1/helloWorld). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5000/meu-xitique/us-central1/helloWorld)."}}
+[debug] [2024-02-20T18:51:51.627Z] [work-queue] {"queuedWork":["/meu-xitique/us-central1/helloWorld-2024-02-20T18:51:51.627Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-20T18:51:51.628Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/meu-xitique/us-central1/helloWorld-2024-02-20T18:51:51.627Z"],"workRunningCount":1}
+[debug] [2024-02-20T18:51:51.629Z] Accepted request GET /meu-xitique/us-central1/helloWorld --> us-central1-helloWorld
+[debug] [2024-02-20T18:51:51.632Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2024-02-20T18:51:51.633Z] [functions] Got req.url=/meu-xitique/us-central1/helloWorld, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/meu-xitique/us-central1/helloWorld, mapping to path=/"}}
+[debug] [2024-02-20T18:51:51.636Z] [worker-pool] addWorker(us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-helloWorld)"}}
+[debug] [2024-02-20T18:51:51.637Z] [worker-pool] Adding worker with key us-central1-helloWorld, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-helloWorld, total=1"}}
+[debug] [2024-02-20T18:51:51.882Z] [runtime-status] [2723] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-02-20T18:51:51.882Z] [runtime-status] [2723] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-20T18:51:51.882Z] [runtime-status] [2723] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2024-02-20T18:51:51.882Z] [runtime-status] [2723] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-20T18:51:51.926Z] [runtime-status] [2723] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Checked functions.config() {\"config\":{}}"}}
+[debug] [2024-02-20T18:51:51.927Z] [runtime-status] [2723] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
+[debug] [2024-02-20T18:51:51.927Z] [runtime-status] [2723] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-20T18:51:51.927Z] [runtime-status] [2723] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2024-02-20T18:51:51.927Z] [runtime-status] [2723] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.7.0","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.7.0\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
+[debug] [2024-02-20T18:51:51.927Z] [runtime-status] [2723] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
+[debug] [2024-02-20T18:51:51.932Z] [runtime-status] [2723] Functions runtime initialized. {"cwd":"/Users/mutaquihadev/WebstormProjects/xitique/functions","node_version":"20.11.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Functions runtime initialized. {\"cwd\":\"/Users/mutaquihadev/WebstormProjects/xitique/functions\",\"node_version\":\"20.11.0\"}"}}
+[debug] [2024-02-20T18:51:51.932Z] [runtime-status] [2723] Listening to port: /var/folders/l8/hnzbd7fx7cjffkc4s6t280200000gp/T/fire_emu_8506383f973b7b94.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[runtime-status] [2723] Listening to port: /var/folders/l8/hnzbd7fx7cjffkc4s6t280200000gp/T/fire_emu_8506383f973b7b94.sock"}}
+[debug] [2024-02-20T18:51:51.944Z] [worker-us-central1-helloWorld-f768b154-962e-47fd-b64c-85c32aabe40e]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-f768b154-962e-47fd-b64c-85c32aabe40e]: IDLE"}}
+[debug] [2024-02-20T18:51:51.944Z] [worker-pool] submitRequest(triggerId=us-central1-helloWorld) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-helloWorld)"}}
+[info] i  functions: Beginning execution of "us-central1-helloWorld" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Beginning execution of \"us-central1-helloWorld\""}}
+[debug] [2024-02-20T18:51:51.945Z] [worker-us-central1-helloWorld-f768b154-962e-47fd-b64c-85c32aabe40e]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-f768b154-962e-47fd-b64c-85c32aabe40e]: BUSY"}}
+[info] >  {"structuredData":true,"severity":"INFO","message":"Hello logs!"} {"user":{"structuredData":true,"severity":"INFO","message":"Hello logs!"},"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"\u001b[90m> \u001b[39m {\"structuredData\":true,\"severity\":\"INFO\",\"message\":\"Hello logs!\"}"}}
+[debug] [2024-02-20T18:51:51.947Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=pause"}}
+[info] i  functions: Finished "us-central1-helloWorld" in 2.231458ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finished \"us-central1-helloWorld\" in 2.231458ms"}}
+[debug] [2024-02-20T18:51:51.947Z] [worker-us-central1-helloWorld-f768b154-962e-47fd-b64c-85c32aabe40e]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"[worker-us-central1-helloWorld-f768b154-962e-47fd-b64c-85c32aabe40e]: IDLE"}}
+[debug] [2024-02-20T18:51:51.947Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=finish"}}
+[debug] [2024-02-20T18:51:51.947Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-helloWorld"},"extension":{},"message":"Finishing up request with event=close"}}
+[debug] [2024-02-20T18:51:51.947Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
+[debug] [2024-02-20T18:51:52.091Z] Functions emulator received unknown request at path /favicon.ico
