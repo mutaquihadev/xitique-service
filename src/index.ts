@@ -9,11 +9,25 @@
 
 import {onRequest} from "firebase-functions/v2/https";
 import * as logger from "firebase-functions/logger";
+import * as admin from "firebase-admin";
+import config from "../env/config";
 
-//Start writing functions
-//https://firebase.google.com/docs/functions/typescript
+admin.initializeApp({
+  credential: admin.credential.cert(config)
+})
 
 export const helloWorld = onRequest((request, response) => {
   logger.info("Hello logs!", {structuredData: true});
-  response.send("Hello from Firebase!");
+  const result = admin.firestore().collection("members").get();
+
+  result.then((docRef) => {
+    //console.log("Document written with ID: ", docRef);
+    docRef.forEach((doc) => {
+      console.log("Document data: ", doc.data());
+    })
+  }).catch((error) => {
+    console.error("Error adding document: ", error);
+  })
+
+  response.send("Hello from Firebase! now what?");
 });
